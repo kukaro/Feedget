@@ -1,9 +1,4 @@
-/**
- * 회원 정보 DB를 접근하는 CRUD 모뎅 작성
- */
 package model.dao;
-
-import java.util.ArrayList;
 
 import org.bson.BasicBSONObject;
 
@@ -15,22 +10,21 @@ import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import com.mongodb.util.JSON;
 
-import model.dto.UserDto;
+import model.dto.DeveloperDto;
 
-public class UserDao {
+public class DeveloperDao {
 	private String MongoDB_IP = "127.0.0.1";
 	private int MongoDB_PORT = 27017;
 	private String DB_NAME = "service";
 
-
-	public boolean insert(String name, String email, String password) {
+	public boolean insert(String name, String company,String email, String password,String category) {
 		// Connect to MongoDB
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
 		DB db = mongoClient.getDB(DB_NAME);
-		DBCollection collection = db.getCollection("user");
+		DBCollection collection = db.getCollection("developer");
 
 		// =========== Make Data01 by BasicDBObject ===========
-		String json = "{'name':'" + name + "','email':'" + email + "','password':'" + password + "'}";
+		String json = "{'name':'" + name + "','company':'" + company + "','email':'" + email + "','password':'" + password + "','category':'" + category + "'}";
 		DBObject dbObject = (DBObject) JSON.parse(json);
 
 		collection.insert(dbObject);
@@ -40,7 +34,7 @@ public class UserDao {
 		
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
 		DB db = mongoClient.getDB(DB_NAME);
-		DBCollection collection = db.getCollection("user");
+		DBCollection collection = db.getCollection("developer");
 		
 		BasicDBObject updateQuery = new BasicDBObject().append("$set", new BasicDBObject().append(key, value));
 	    BasicDBObject searchQuery = new BasicDBObject().append("email", email);
@@ -52,30 +46,26 @@ public class UserDao {
 		
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
 		DB db = mongoClient.getDB(DB_NAME);
-		DBCollection collection = db.getCollection("user");
+		DBCollection collection = db.getCollection("developer");
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
 		collection.remove(searchQuery);
 		
 		return true;
 	}
-	public UserDto find(String email){
+	public DeveloperDto find(String email){
 		
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
 		DB db = mongoClient.getDB(DB_NAME);
-		DBCollection collection = db.getCollection("user");
-		UserDto userDto;
+		DBCollection collection = db.getCollection("developer");
+		DeveloperDto developerDto;
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
 		DBObject dbObject = collection.findOne(searchQuery);
-		userDto = new UserDto(((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("password"));
+		developerDto = new DeveloperDto(((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("company"),((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("password"),((BasicBSONObject) dbObject).getString("category"));
         System.out.println(((BasicBSONObject) dbObject).getString("password"));
 
-		return userDto;
+		return developerDto;
 	}
-	
-	
-	
-
 
 }
