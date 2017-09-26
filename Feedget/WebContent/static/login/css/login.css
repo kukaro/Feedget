@@ -1,0 +1,34 @@
+.loginForm {
+	width: 410px;
+	height:430px;
+	margin: 40px auto;
+	
+	overflow: auto;
+}
+.loginForm h2 {
+	color:white;
+	text-align:center;
+	margin-top:50px;
+	margin-bottom:30px;
+}
+.form-group {
+	margin-bottom:40px;
+}
+#header-featured {
+	height:600px;
+}
+
+.login-input button {
+	background-color:#1B9772;
+	color:white;
+	margin-left:15px;
+	max-width:380px;
+}
+
+.tagA {
+	text-align:center;
+	margin-top:40px;
+	color:#D5D5D5;
+	font-size:13px;
+	margin-left:35px;
+}

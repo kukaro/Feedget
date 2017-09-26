@@ -1,0 +1,39 @@
+#header-featured {
+	height:600px;
+}
+.joinForm {
+	width:400px;
+	height:450px;
+	margin:10px auto;
+}
+.joinForm h3 {
+	margin-top:25px;
+	margin-bottom:20px;
+	text-align:center;
+	color:white;
+}
+.join-input button {
+	background-color:#1B9772;
+	color:white;
+	margin-left:15px;
+	max-width:370px;
+}
+
+.form-group {
+	margin-bottom:15px;
+}
+.form-group span {
+	color:white;
+	font-size:13px;
+	text-align:right;
+	float:right;
+}
+tagA a {
+ text-align:center;
+}
+.footer {
+	height:40px;
+	background-color:#F6F6F6;
+	text-align:center;
+	color:#8C8C8C;
+}
