@@ -72,7 +72,7 @@ tagA a {
 <div id="header-featured"> 
 	<div class="joinForm row">
 				<h3>계정 만들기</h3>
-				<form method="GET" action="SignUpController">
+				<form method="GET" action="DevSignUpController">
   					<div class="form-group col-md-12">
     					<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="이메일">
   					</div>

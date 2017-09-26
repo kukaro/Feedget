@@ -1,15 +1,24 @@
 package model.dto;
 
 public class DeveloperDto {
-	private String name, company,email,password,category;
+	private String name, company,email,password,category,site;
 
-	public DeveloperDto(String name, String company, String email, String password, String category) {
+	public DeveloperDto(String name, String company, String email, String password, String category,String site) {
 		super();
 		this.name = name;
 		this.company = company;
 		this.email = email;
 		this.password = password;
 		this.category = category;
+		this.site = site;
+	}
+
+	public String getSite() {
+		return site;
+	}
+
+	public void setSite(String site) {
+		this.site = site;
 	}
 
 	public String getName() {

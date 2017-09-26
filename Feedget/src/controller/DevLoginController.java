@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class LogoutController
+ * Servlet implementation class LoginController
  */
-public class LogoutController extends HttpServlet {
+public class DevLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LogoutController() {
+    public DevLoginController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,16 +26,18 @@ public class LogoutController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 		HttpSession s = request.getSession();
 		
-		s.removeAttribute("email");
-		s.removeAttribute("name");
+		String name = request.getParameter("exampleInputName");
+		String email = request.getParameter("exampleInputEmail1");
+		s.setAttribute("email", request.getParameter("exampleInputEmail1"));
+		s.setAttribute("name", request.getParameter("exampleInputName"));
+		System.out.println(name);
+		System.out.println(email);
 		
 		request.getRequestDispatcher("index.jsp").forward(request, response);
-		
 	}
-
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

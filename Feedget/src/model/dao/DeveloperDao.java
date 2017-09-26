@@ -17,14 +17,14 @@ public class DeveloperDao {
 	private int MongoDB_PORT = 27017;
 	private String DB_NAME = "service";
 
-	public boolean insert(String name, String company,String email, String password,String category) {
+	public boolean insert(String name, String company,String email, String password,String category,String site) {
 		// Connect to MongoDB
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
 		DB db = mongoClient.getDB(DB_NAME);
 		DBCollection collection = db.getCollection("developer");
 
 		// =========== Make Data01 by BasicDBObject ===========
-		String json = "{'name':'" + name + "','company':'" + company + "','email':'" + email + "','password':'" + password + "','category':'" + category + "'}";
+		String json = "{'name':'" + name + "','company':'" + company + "','email':'" + email + "','password':'" + password + "','category':'" + category + "','site':'" + site + "'}";
 		DBObject dbObject = (DBObject) JSON.parse(json);
 
 		collection.insert(dbObject);
@@ -62,7 +62,7 @@ public class DeveloperDao {
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
 		DBObject dbObject = collection.findOne(searchQuery);
-		developerDto = new DeveloperDto(((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("company"),((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("password"),((BasicBSONObject) dbObject).getString("category"));
+		developerDto = new DeveloperDto(((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("company"),((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("password"),((BasicBSONObject) dbObject).getString("category"),((BasicBSONObject) dbObject).getString("site"));
         System.out.println(((BasicBSONObject) dbObject).getString("password"));
 
 		return developerDto;

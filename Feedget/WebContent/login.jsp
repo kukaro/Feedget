@@ -76,7 +76,7 @@
 	<div class="loginForm row">
 		<h2>LOGIN</h2>
 		
-		<form class="login-input" method="GET" action="LoginController">
+		<form class="login-input" method="GET" action="DevLoginController">
   			<div class="form-group col-md-12">
     			<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="이메일">
   			</div>
