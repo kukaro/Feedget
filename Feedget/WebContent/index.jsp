@@ -10,10 +10,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link href="static/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link href="static/index/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="static/index/css/index.css" rel="stylesheet" type="text/css" media="all" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<style>
-</style>
 </head>
 <body>
 
@@ -40,9 +39,9 @@
 	<div id="extra" class="container">
     <h2 style="color:white;">2백만여가지의 다양한 컨텐츠를 만나보세요.</h2>
     <span>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh</span> 
-    <p>This is <strong>Breadth</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+    <p>This is <strong>Breadth</strong>, a free, fully standards-compliant CSS template designed byTEMPLATEDreative Commons Attributilicense, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 
-    <a href="#" class="button">피젯 등록</a> </div>
+    <button type="button" class="btn btn-lg btn-block col-lg-2">피젯 등록</button>
 </div>
 
 <!-- footer -->

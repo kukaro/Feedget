@@ -10,43 +10,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link href="static/fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link href="static/index/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="static/join/css/join.css" rel="stylesheet" type="text/css" media="all" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<style>
-#header-featured {
-	height:600px;
-}
-.joinForm {
-	width:400px;
-	height:450px;
-	margin:20px auto;
-	background-color:white;
-}
-.joinForm h3 {
-	margin-top:45px;
-	margin-bottom:45px;
-	text-align:center;
-}
-
-.joinForm button {
-	height:30px;
-	margin:auto 10px;
-	margin-top:30px;
-	background-color:#1B9772;
-}
-.form-group {
-	margin-bottom:15px;
-}
-tagA a {
- text-align:center;
-}
-.footer {
-	height:40px;
-	background-color:#F6F6F6;
-	text-align:center;
-	color:#8C8C8C;
-}
-</style>
 </head>
 <body>
 
@@ -72,38 +38,34 @@ tagA a {
 <div id="header-featured"> 
 	<div class="joinForm row">
 				<h3>계정 만들기</h3>
-				<form>
+				<form class="join-input" method="GET" action="DevSignUpController">
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일">
+    					<input type="text" class="form-control" id="DevMail" name="DevEmail" placeholder="이메일">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="이름">
+    					<input type="text" class="form-control" id="DevName" name="DevName" placeholder="이름">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호">
+    					<input type="password" class="form-control" id="password" name="password" placeholder="암호">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="암호 재입력">
+    					<input type="text" class="form-control" id="company" name="company" placeholder="개발사이름">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="개발사이름">
+    					<input type="text" class="form-control" id="address" name="address" placeholder="웹사이트 주소">
   					</div>
-  					<button type="submit" class="button col-md-11">가입하기</button>
+  					<div class="form-group col-md-12">
+    					<input type="text" class="form-control" id="category" name="category" placeholder="카테고리 태그">
+  					</div>
+  					<div class="form-group col-md-12">
+    					<span>* 카테고리는 띄어쓰기로 구분하여 주세요.</span>
+  					</div>
+  					<button type="button" class="btn btn-lg btn-block col-lg-2">JOIN</button>
 				</form>
 				
 			</div>
 </div>
 
-<!-- bottom-contents -->
-<div id="wrapper">
-  
-  <div id="extra" class="container">
-    <h2>2백만여가지의 다양한 컨텐츠를 만나보세요.</h2>
-    <span>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh</span> 
-    <p>This is <strong>Breadth</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
-
-    <a href="#" class="button">피젯 등록</a> </div>
-</div>
 
 
 <!-- footer -->

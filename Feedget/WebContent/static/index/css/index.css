@@ -1,0 +1,11 @@
+#header-featured h2 {
+	margin-top:50px;
+	margin-bottom:20px;
+}
+#header-featured button {
+	background-color:#1B9772;
+	color:white;
+	margin:40px 0 0 500px;
+	width:200px;
+	height:40px;
+}
