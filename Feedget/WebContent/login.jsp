@@ -84,6 +84,7 @@
     			<input type="text" class="form-control" id="exampleInputName" name="exampleInputName" placeholder="이름">
   			</div>
   			<button type="submit" class="button">LOGIN</button>
+
 		</form>
 		
 		<hr id="line">
