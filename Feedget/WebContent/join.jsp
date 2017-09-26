@@ -72,21 +72,23 @@ tagA a {
 <div id="header-featured"> 
 	<div class="joinForm row">
 				<h3>계정 만들기</h3>
-				<form>
+
+				<form method="GET" action="DevSignUpController">
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일">
+    					<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="이메일">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="이름">
+    					<input type="text" class="form-control" id="exampleInputName" name="exampleInputName" placeholder="이름">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호">
+    					<input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1" placeholder="암호">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="암호 재입력">
+    					<input type="password" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="암호 재입력">
   					</div>
   					<div class="form-group col-md-12">
-    					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="개발사이름">
+    					<input type="text" class="form-control" id="exampleInputCompany" name="exampleInputCompany" placeholder="개발사이름">
+
   					</div>
   					<button type="submit" class="button col-md-11">가입하기</button>
 				</form>

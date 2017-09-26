@@ -76,15 +76,15 @@
 	<div class="loginForm row">
 		<h2>LOGIN</h2>
 		
-		<form class="login-input">
+		<form class="login-input" method="GET" action="DevLoginController">
   			<div class="form-group col-md-12">
-    			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일">
+    			<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="이메일">
   			</div>
   			<div class="form-group col-md-12">
-    			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="이름">
+    			<input type="text" class="form-control" id="exampleInputName" name="exampleInputName" placeholder="이름">
   			</div>
-  			<a href="#" type="submit" class="button">LOGIN</a> 
-  			
+  			<button type="submit" class="button">LOGIN</button>
+
 		</form>
 		
 		<hr id="line">
