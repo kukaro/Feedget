@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.AppCompat.NoActionBar"
-    tools:context="hackathon.wap.wapsup.MainActivity">
+    android:background="@android:color/white"
+    tools:context="hackathon.wap.wapsup.Main">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimaryDark">
-
+        android:background="@drawable/bg_color">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="메인"
-            android:textSize="20dp"
+            android:text="FEEDGET"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
-
     </android.support.v7.widget.Toolbar>
 </LinearLayout>
