@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginController
@@ -25,9 +26,18 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		HttpSession s = request.getSession();
+		
+		String name = request.getParameter("exampleInputName");
+		String email = request.getParameter("exampleInputEmail1");
+		s.setAttribute("email", request.getParameter("exampleInputEmail1"));
+		s.setAttribute("name", request.getParameter("exampleInputName"));
+		System.out.println(name);
+		System.out.println(email);
+		
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
-
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
