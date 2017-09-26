@@ -48,7 +48,6 @@
     			<input type="password" class="form-control" id="password" name="password" placeholder="암호">
   			</div>
   			<button type="button" class="btn btn-lg btn-block col-lg-2">LOGIN</button>
-  			
 		</form>
 		
 		<div class="row">
