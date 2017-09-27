@@ -101,7 +101,7 @@ function addImage() {
 				<td class="addText-key"><label for="company">image</label>\
 				</td>\
 				<td class="addText-value"><input type="text"\
-					class="value form-control" id="imgURL'+count+'"\
+					class="value form-control" id="imgData'+count+'"\
 					placeholder="이미지 url을 입력하세요."></td>\
 			</tr>\
 		</table>\
@@ -112,7 +112,7 @@ function addImage() {
 	json['imgY'+count] = $('#imgY'+count).val();
 	json['imgWidth'+count] = $('#imgWidth'+count).val();
 	json['imgHeight'+count] = $('#imgHeight'+count).val();
-	json['imgURL'+count] = $('#imgURL'+count).val();
+	json['imgData'+count] = $('#imgData'+count).val();
 	count++;
 }
 

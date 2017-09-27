@@ -3,7 +3,7 @@
 <style>
 .onMouse {
 	background: #197d62;
-	color: white !important;
+	color: #FFF !important;
 }
 
 .outMouse {

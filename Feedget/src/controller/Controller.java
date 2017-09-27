@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Enumeration;
 
 import javax.servlet.ServletException;
@@ -9,15 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import model.dto.DeveloperDto;
 import model.service.DeveloperService;
+import model.service.FeedgetService;
 
 /**
  * Servlet implementation class Controller
  */
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	public Controller() {
 		super();
 	}
@@ -45,11 +50,46 @@ public class Controller extends HttpServlet {
 	}
 
 	private void registFeedget(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		HttpSession sess = request.getSession();
 		Enumeration<String> params = request.getParameterNames();
+		JsonObject jsObj = new JsonObject();
+		ArrayList<JsonObject> joArr = new ArrayList<>();
 		while(params.hasMoreElements()) {
-			String names = (String)params.nextElement();
-			System.out.println(names + " : " + request.getParameter(names));
+			String tmp;
+			String str = (String)params.nextElement();
+			int num = str.charAt(str.length()-1);
+			String type = str.substring(0,3);
+			if(type.equals("lbl")) {
+				type = "label";
+			}
+			else if(type.equals("img")){
+				type = "image";
+			}
+			if(num<=57 && num>=48) {
+				num -= 48;
+				tmp = str.substring(3,str.length());
+				tmp = tmp.substring(0,tmp.length()-1);
+				try{
+					joArr.get(num);
+				}catch(IndexOutOfBoundsException e) {
+					joArr.add(new JsonObject());
+					joArr.get(num).add(type,new JsonObject());
+				}
+				((JsonObject)(joArr.get(num).get(type))).addProperty(tmp.toLowerCase(), request.getParameter(str));
+			}
+			else {
+				jsObj.addProperty(str, request.getParameter(str));
+			}
+			//System.out.println(str + " : " + request.getParameter(str));
 		}
+		JsonArray jsArr = new JsonArray();
+		for(JsonObject jo:joArr) {
+			jsArr.add(jo);
+		}
+		jsObj.add("data", jsArr);
+		jsObj.addProperty("email", sess.getAttribute("loginEmail").toString());
+		jsObj.addProperty("name", sess.getAttribute("loginName").toString());
+		FeedgetService.getInstance().registFeedget(jsObj);
 	}
 
 	private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
