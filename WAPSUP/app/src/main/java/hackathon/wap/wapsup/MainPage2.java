@@ -24,7 +24,8 @@ import java.util.Map;
 
 
 public class MainPage2 extends Fragment {
-    String img,comment,name,email,company;
+    String data, img, comment, name, email, company, site;
+    String color, x, width, text, y, height;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,19 +39,52 @@ public class MainPage2 extends Fragment {
         Login.requestQueue.add(jsObjRequest);
         return view;
     }
+
     private Response.Listener<JSONObject> networkSuccessListener() {
+
         return new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(final JSONObject response) {
                 try {
                     JSONArray jsonArray = new JSONArray(response.getString("feedget"));
-                    for(int i = 0;i<jsonArray.length();i++){
-                        if(jsonArray.getString(i).equals("{}"))
-                            break;
-                       Log.e("Json "+i, jsonArray.getString(i));
+                    Log.e("jsonArray", jsonArray.length() + "");
+                    Log.e("asdas: ", jsonArray.toString());
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        data = jsonArray.getString(i);
+                        Log.e("data: ", data);
+                        JSONObject data = new JSONObject(jsonArray.getString(i));
+                        img = data.getString("img");
+                        Log.e("img: ", img);
+                        site = data.getString("site");
+                        Log.e("site: ", site);
+                        name = data.getString("name");
+                        Log.e("name: ", name);
+                        email = data.getString("email");
+                        Log.e("email: ", email);
+                        company = data.getString("company");
+                        Log.e("company: ", company);
+                        try{
+                            comment = data.getString("comment");
+                            Log.e("comment: ", comment);
+                        }catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                       JSONArray dataArray = new JSONArray(data.getString("data"));
+                        for(int j = 0;j<dataArray.length();j++){
+                            JSONObject dataObject = new JSONObject(dataArray.getString(j));
+                            JSONObject  labelObject = new JSONObject(dataObject.getString("label"));
+                         color =  labelObject.getString("color");
+                            Log.e("color: ",color);
+                          x =  labelObject.getString("x");
+                          width =  labelObject.getString("width");
+                           text = labelObject.getString("text");
+                           y =  labelObject.getString("y");
+                           height =  labelObject.getString("height");
+                        }
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+
+                } catch (JSONException e1) {
+                    e1.printStackTrace();
                 }
             }
         };
@@ -72,3 +106,4 @@ public class MainPage2 extends Fragment {
 
     }
 }
+
