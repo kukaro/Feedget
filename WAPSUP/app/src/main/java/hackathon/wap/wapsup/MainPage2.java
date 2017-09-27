@@ -44,9 +44,10 @@ public class MainPage2 extends Fragment {
             public void onResponse(final JSONObject response) {
                 try {
                     JSONArray jsonArray = new JSONArray(response.getString("feedget"));
-                    Log.e("length ",""+jsonArray.length());
                     for(int i = 0;i<jsonArray.length();i++){
-                       Log.e("Json "+i, jsonArray.getJSONObject(i).toString());
+                        if(jsonArray.getString(i).equals("{}"))
+                            break;
+                       Log.e("Json "+i, jsonArray.getString(i));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
