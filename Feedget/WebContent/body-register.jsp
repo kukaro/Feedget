@@ -28,16 +28,6 @@
 									name="description" placeholder="Feedget Description">
 							</div>
 							<div class="form-group">
-								<label for="developer">등록인</label> <input type="text"
-									class="form-control" id="developer" name="developer"
-									placeholder="Developer">
-							</div>
-							<div class="form-group">
-								<label for="company">개발사</label> <input type="text"
-									class="form-control" id="company" name="company"
-									placeholder="Company">
-							</div>
-							<div class="form-group">
 								<label id="feed-layout">피젯 레이아웃 정보들을 입력해주세요.</label>
 							</div>
 
