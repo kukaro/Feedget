@@ -91,4 +91,28 @@
     <servlet-name>header-login-jsp</servlet-name>
     <url-pattern>/header-login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>body-mypage-jsp</servlet-name>
+    <jsp-file>/body-mypage.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>body-mypage-jsp</servlet-name>
+    <url-pattern>/body-mypage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>body-introduction-jsp</servlet-name>
+    <jsp-file>/body-introduction.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>body-introduction-jsp</servlet-name>
+    <url-pattern>/body-introduction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>body-structure-jsp</servlet-name>
+    <jsp-file>/body-structure.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>body-structure-jsp</servlet-name>
+    <url-pattern>/body-structure</url-pattern>
+  </servlet-mapping>
 </web-app>
