@@ -26,12 +26,12 @@ public class Login extends AppCompatActivity {
     public EditText userEmail, userPassword;
     public static String url = "http://192.168.43.153:3000/VolleyTest/Servlet2.java";
     String email, password, emailCheck = "";
-
+    static RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        final RequestQueue requestQueue = Volley.newRequestQueue(Login.this);
+          requestQueue = Volley.newRequestQueue(Login.this);
 
         loginButton = (Button) findViewById(R.id.login_button);
         joinButton = (Button) findViewById(R.id.login_join_button);
@@ -45,7 +45,6 @@ public class Login extends AppCompatActivity {
                 password = userPassword.getText().toString();
                 CustomRequest jsObjRequest = new CustomRequest(Request.Method.POST, Login.url, getParams(), networkSuccessListener(), networkErrorListener());
                 requestQueue.add(jsObjRequest);
-
             }
         });
 
