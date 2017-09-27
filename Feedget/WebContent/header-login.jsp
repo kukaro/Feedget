@@ -30,6 +30,9 @@
 	function header_index() {
 		$('#body-frame').load('body-index');
 	}
+	function header_mypage() {
+		$('#body-frame').load('body-mypage');
+	}
 </script>
 <div id="header-wrapper">
 	<div id="header" class="container">

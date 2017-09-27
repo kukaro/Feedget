@@ -1,6 +1,26 @@
 var tagArr = [];
 var json = {};
+var diva = [];
 var count = 0;
+function makeLabelDiv(x,y,width,height,text,color,count){
+	if(x) x=0;
+	if(y) y=0;
+	if(width) width=0;
+	if(height) height=0;
+	if(color) color=0;
+	var openDiv = '<div style="margin-left:'+x+'px;margin-top:'+y+';width:'+width+'px;height:'+height+'">';
+	var closeDiv = '</div>';
+	var str = '<span>'+text+'</span>';
+	diva[count] = openDiv+str+closeDiv;
+	var result="";
+	console.log("len : "+diva.length);
+	console.log("count : "+count);
+	for(var i=0;i<diva.length;i++){
+		result += diva[i];
+	}
+	console.log(result);
+	$('.feed').html(result);
+}
 		function addLabel() {
 			var textTag = '<div class="row">\
 	<table class="addText">\
@@ -17,7 +37,7 @@ var count = 0;
 			<label for="company">y-좌표</label>\
 		</td>\
 		<td class="addText-value">\
-			<input type="text" class="value form-control" id="lblY'+count+'" placeholder="레이아웃이 위치될 x좌표값을 입력하세요.">\
+			<input type="text" class="value form-control" id="lblY'+count+'" placeholder="레이아웃이 위치될 y좌표값을 입력하세요." >\
 		</td>\
 	</tr>\
 	<tr>\
@@ -25,7 +45,7 @@ var count = 0;
 			<label for="company">width</label>\
 		</td>\
 		<td class="addText-value">\
-			<input type="text" class="value form-control" id="lblWidth'+count+'" placeholder="레이아웃의 너비를 입력하세요.">\
+			<input type="text" class="value form-control" id="lblWidth'+count+'" placeholder="레이아웃의 너비를 입력하세요." >\
 		</td>\
 	</tr>\
 	<tr>\
@@ -33,7 +53,7 @@ var count = 0;
 			<label for="company">height</label>\
 		</td>\
 		<td class="addText-value">\
-			<input type="text" class="value form-control" id="lblHeight'+count+'" placeholder="레이아웃의 높이를 입력하세요.">\
+			<input type="text" class="value form-control" id="lblHeight'+count+'" placeholder="레이아웃의 높이를 입력하세요." ">\
 		</td>\
 	</tr>\
 	<tr>\
@@ -41,7 +61,7 @@ var count = 0;
 			<label for="company">text</label>\
 		</td>\
 		<td class="addText-value">\
-			<input type="text" class="value form-control" id="lblText'+count+'" placeholder="레이아웃에 들어갈 내용을 입력하세요.">\
+			<input type="text" class="value form-control" id="lblText'+count+'" placeholder="레이아웃에 들어갈 내용을 입력하세요." >\
 		</td>\
 	</tr>\
 	<tr>\
@@ -49,7 +69,7 @@ var count = 0;
 			<label for="company">text-color</label>\
 		</td>\
 		<td class="addText-value">\
-			<input type="text" class="value form-control" id="lblColor'+count+'" placeholder="텍스트 레이아웃의 색상값(16진수)을 입력하세요.">\
+			<input type="text" class="value form-control" id="lblColor'+count+'" placeholder="텍스트 레이아웃의 색상값(16진수)을 입력하세요." >\
 		</td>\
 	</tr>\
 </table>\

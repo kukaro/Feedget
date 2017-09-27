@@ -15,7 +15,11 @@
 <script src="./static/index/js/jquery-3.2.1.js"></script>
 <script>
 	function header_mypage() {
+		<%if(session.getAttribute("isLogin")!=null){%>
 		$('#body-frame').load('body-mypage');
+		<%}else{%>
+		$('#body-frame').load('body-index');
+		<%}%>
 	}
 	function header_search() {
 		$('#body-frame').load('body-search');
