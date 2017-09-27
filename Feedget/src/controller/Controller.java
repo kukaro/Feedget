@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.Enumeration;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,13 +36,25 @@ public class Controller extends HttpServlet {
 		case "logout":
 			logout(request, response);
 			break;
+		case "registFeedget":
+			registFeedget(request, response);
+			break;
 		default:
 			System.out.println("None case");
 		}
 	}
+
+	private void registFeedget(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		Enumeration<String> params = request.getParameterNames();
+		while(params.hasMoreElements()) {
+			String names = (String)params.nextElement();
+			System.out.println(names + " : " + request.getParameter(names));
+		}
+	}
+
 	private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession sess = request.getSession();
-		if(sess.getAttribute("isLogin")!=null) {
+		if (sess.getAttribute("isLogin") != null) {
 			sess.removeAttribute("loginEmail");
 			sess.removeAttribute("loginSite");
 			sess.removeAttribute("loginCompany");

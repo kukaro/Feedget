@@ -11,7 +11,11 @@
 </style>
 <script>
 function register(){
+	<%if(session.getAttribute("isLogin")!=null){%>
 	$('#body-frame').load('body-register');
+	<%}else{%>
+	$('#body-frame').load('body-index');
+	<%}%>
 }
 </script>
 
