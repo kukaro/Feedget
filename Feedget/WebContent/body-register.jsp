@@ -52,10 +52,6 @@ function feedgetKey(event) {
 			</div>
 		</div>
 
-		<div class="preview col-md-5">
-			<div class="feed"></div>
-		</div>
-
 	</div>
 
 </div>
