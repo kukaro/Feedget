@@ -8,9 +8,7 @@
 	function header_index() {
 		$('#body-frame').load('body-index');
 	}
-	function header_login() {
-		$('#body-frame').load('body-login');
-	}
+
 </script>
 <div id="header-wrapper">
 	<div id="header" class="container">
@@ -23,14 +21,10 @@
 			<ul>
 				<li class="current_page_item"><a href="#" accesskey="1"
 					title="" onclick="header_index()">Home</a></li>
-				<li><a href="#" accesskey="2" title=""
-					onclick="header_search();">Search</a></li>
-				<li><a href="#" accesskey="3" title=""
-					onclick="header_category();">Category</a></li>
-				<li><a href="#" accesskey="4" title=""
-					onclick="header_mypage();">Mypage</a></li>
-				<li><a href="#" accesskey="5" title=""
-					onclick="header_login();">Login</a></li>
+				<li><a href="#" accesskey="2" title="" onclick="header_search();">Search</a></li>
+				<li><a href="#" accesskey="3" title="" onclick="header_category();">Category</a></li>
+				<li><a href="#" accesskey="4" title="" onclick="header_mypage();">Mypage</a></li>
+				<li><a href="/Feedget/controller?action=logout" accesskey="5" title="">Logout</a></li>
 			</ul>
 		</div>
 	</div>
