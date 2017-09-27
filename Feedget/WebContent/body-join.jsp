@@ -5,7 +5,7 @@
 <div id="header-featured"> 
 	<div class="joinForm row">
 		<h3>계정 만들기</h3>
-		<form class="join-input" method="GET" action="DevSignUpController">
+		<form class="join-input" method="POST" action="controller?action=join">
   			<div class="form-group col-md-12">
     			<input type="text" class="form-control" id="devEmail" name="devEmail" placeholder="이메일">
   			</div>

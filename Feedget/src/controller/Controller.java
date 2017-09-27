@@ -1,12 +1,15 @@
 package controller;
 
 import java.io.IOException;
+import java.util.Enumeration;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.dto.DeveloperDto;
 import model.service.DeveloperService;
 
 /**
@@ -27,9 +30,54 @@ public class Controller extends HttpServlet {
 		case "join":
 			join(request, response);
 			break;
+		case "login":
+			login(request, response);
+			break;
+		case "logout":
+			logout(request, response);
+			break;
+		case "registFeedget":
+			registFeedget(request, response);
+			break;
 		default:
-
+			System.out.println("None case");
 		}
+	}
+
+	private void registFeedget(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		Enumeration<String> params = request.getParameterNames();
+		while(params.hasMoreElements()) {
+			String names = (String)params.nextElement();
+			System.out.println(names + " : " + request.getParameter(names));
+		}
+	}
+
+	private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		HttpSession sess = request.getSession();
+		if (sess.getAttribute("isLogin") != null) {
+			sess.removeAttribute("loginEmail");
+			sess.removeAttribute("loginSite");
+			sess.removeAttribute("loginCompany");
+			sess.removeAttribute("loginName");
+			sess.removeAttribute("isLogin");
+		}
+		response.sendRedirect("/Feedget/index");
+	}
+
+	private void login(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String email = request.getParameter("devEmail");
+		String password = request.getParameter("devPassword");
+		DeveloperDto dto = DeveloperService.getInstance().login(email, password);
+		if (dto != null) {
+			System.out.println("Controller - login : " + dto.toString());
+			HttpSession sess = request.getSession();
+			sess.setAttribute("loginEmail", email);
+			sess.setAttribute("loginSite", dto.getSite());
+			sess.setAttribute("loginCompany", dto.getCompany());
+			sess.setAttribute("loginName", dto.getName());
+			sess.setAttribute("isLogin", true);
+		}
+		response.sendRedirect("/Feedget/index");
 	}
 
 	private void join(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -44,12 +92,10 @@ public class Controller extends HttpServlet {
 		if (!password.equals(passwordVerify)) {
 			System.out.println("Controller - join : password was not mathced");
 			response.sendRedirect("/Feedget/index");
-		}
-		else if(!emailIsUnique) {
+		} else if (!emailIsUnique) {
 			System.out.println("Controller - join : email is not unique");
 			response.sendRedirect("/Feedget/index");
-		}
-		else {
+		} else {
 			HttpSession sess = request.getSession(true);
 			sess.setAttribute("loginEmail", email);
 			sess.setAttribute("loginSite", site);

@@ -61,4 +61,10 @@ public class DeveloperDto {
 		this.category = category;
 	}
 	
+	@Override
+	public String toString() {
+		return "DeveloperDto [name=" + name + ", company=" + company + ", email=" + email + ", password=" + password
+				+ ", category=" + category + ", site=" + site + "]";
+	}
+	
 }

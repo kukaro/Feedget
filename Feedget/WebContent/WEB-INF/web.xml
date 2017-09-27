@@ -10,66 +10,52 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>LoginController</display-name>
-    <servlet-name>LoginController</servlet-name>
-    <servlet-class>controller.LoginController</servlet-class>
+    <servlet-name>body-index-jsp</servlet-name>
+    <jsp-file>/body-index.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginController</servlet-name>
-    <url-pattern>/LoginController</url-pattern>
+    <servlet-name>body-index-jsp</servlet-name>
+    <url-pattern>/body-index</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>SignUpController</display-name>
-    <servlet-name>SignUpController</servlet-name>
-    <servlet-class>controller.SignUpController</servlet-class>
+    <servlet-name>body-login-jsp</servlet-name>
+    <jsp-file>/body-login.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SignUpController</servlet-name>
-    <url-pattern>/SignUpController</url-pattern>
+    <servlet-name>body-login-jsp</servlet-name>
+    <url-pattern>/body-login</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>LogoutController</display-name>
-    <servlet-name>LogoutController</servlet-name>
-    <servlet-class>controller.LogoutController</servlet-class>
+    <servlet-name>body-join-jsp</servlet-name>
+    <jsp-file>/body-join.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LogoutController</servlet-name>
-    <url-pattern>/LogoutController</url-pattern>
+    <servlet-name>body-join-jsp</servlet-name>
+    <url-pattern>/body-join</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>body-index-jsp</servlet-name>
-  	<jsp-file>/body-index.jsp</jsp-file>
+    <servlet-name>body-search-jsp</servlet-name>
+    <jsp-file>/body-search.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>body-index-jsp</servlet-name>
-  	<url-pattern>/body-index</url-pattern>
+    <servlet-name>body-search-jsp</servlet-name>
+    <url-pattern>/body-search</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>body-login-jsp</servlet-name>
-  	<jsp-file>/body-login.jsp</jsp-file>
+    <servlet-name>header-jsp</servlet-name>
+    <jsp-file>/header.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>body-login-jsp</servlet-name>
-  	<url-pattern>/body-login</url-pattern>
+    <servlet-name>header-jsp</servlet-name>
+    <url-pattern>/header</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>body-join-jsp</servlet-name>
-  	<jsp-file>/body-join.jsp</jsp-file>
+    <servlet-name>index-jsp</servlet-name>
+    <jsp-file>/index.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>body-join-jsp</servlet-name>
-  	<url-pattern>/body-join</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>body-search-jsp</servlet-name>
-  	<jsp-file>/body-search.jsp</jsp-file>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>body-search-jsp</servlet-name>
-  	<url-pattern>/body-search</url-pattern>
+    <servlet-name>index-jsp</servlet-name>
+    <url-pattern>/index</url-pattern>
   </servlet-mapping>
     <servlet>
   	<servlet-name>body-register-jsp</servlet-name>
@@ -80,27 +66,29 @@
   	<url-pattern>/body-register</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>header-jsp</servlet-name>
-  	<jsp-file>/header.jsp</jsp-file>
+    <servlet-name>register-jsp</servlet-name>
+    <jsp-file>/register.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>header-jsp</servlet-name>
-  	<url-pattern>/header</url-pattern>
+    <servlet-name>register-jsp</servlet-name>
+    <url-pattern>/register</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>index-jsp</servlet-name>
-  	<jsp-file>/index.jsp</jsp-file>
+    <description></description>
+    <display-name>Controller</display-name>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>controller.Controller</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>index-jsp</servlet-name>
-  	<url-pattern>/index</url-pattern>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>/controller</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>register-jsp</servlet-name>
-  	<jsp-file>/register.jsp</jsp-file>
+    <servlet-name>header-login-jsp</servlet-name>
+    <jsp-file>/header-login.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>register-jsp</servlet-name>
-  	<url-pattern>/register</url-pattern>
+    <servlet-name>header-login-jsp</servlet-name>
+    <url-pattern>/header-login</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -15,12 +15,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="./static/index/js/jquery-3.2.1.js"></script>
 <script>
+	<%if(session.getAttribute("isLogin")!=null){%>
+	$(document).ready(function() {
+		$('#header-frame').load('header-login');
+	});
+	$(document).ready(function() {
+		$('#body-frame').load('body-index');
+	});
+	<%}else{%>
 	$(document).ready(function() {
 		$('#header-frame').load('header');
 	});
 	$(document).ready(function() {
 		$('#body-frame').load('body-index');
 	});
+	<%}%>
 </script>
 </head>
 <body>

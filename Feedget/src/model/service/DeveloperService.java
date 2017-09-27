@@ -1,6 +1,7 @@
 package model.service;
 
 import model.dao.DeveloperDao;
+import model.dto.DeveloperDto;
 
 public class DeveloperService {
 	/*
@@ -28,5 +29,16 @@ public class DeveloperService {
 			return true;
 		}
 		return false;
+	}
+
+	public DeveloperDto login(String email, String password) {
+		DeveloperDto dto = DeveloperDao.getInstance().find(email);
+		if(dto!=null) {
+			if(dto.getPassword().equals(password)) {
+				return dto;
+			}
+			return null;
+		}
+		return null;
 	}
 }
