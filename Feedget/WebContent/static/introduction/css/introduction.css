@@ -1,0 +1,43 @@
+#header-wrapper {
+	top:0;
+	position:fixed;
+	width:100%;
+	z-index:10;
+}
+#header-featured {
+	margin-top:150px;
+	height:700px;
+}
+#header-featured h1 {
+	margin: 30px 0 30px 60px;
+	color:white;
+}
+.wap-img {
+	width:180px;
+	height:180px;
+	margin-bottom:20px;
+	text-align:center;
+}
+.intro {
+	width:100%;
+	padding:30px 0 0 50px;
+}
+.info {
+	width:200px;
+}
+.info div {
+text-align:center;
+}
+.info h4 {
+color:white;
+text-align:center;
+}
+.info h3 {
+color:white;
+text-align:center;
+margin-bottom:10px;
+}
+#roll {
+color:#D5D5D5;
+text-align:center;
+}

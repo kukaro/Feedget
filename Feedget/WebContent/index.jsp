@@ -30,6 +30,14 @@
 		$('#body-frame').load('body-index');
 	});
 	<%}%>
+	
+	function body_introduction() {
+		$('#body-frame').load('body-introduction');
+	}
+	function body_structure() {
+		$('#body-frame').load('body-structure');
+	}
+	
 </script>
 </head>
 <body>
@@ -43,9 +51,9 @@
 	<!-- footer -->
 	<div id="copyright" class="container">
   		<p>
-  			&copy; Untitled. All rights reserved. | Photos by 
-  			<a href="http://fotogrph.com/">Fotogrph</a> | Design by 
-  			<a href="http://templated.co" rel="nofollow">TEMPLATED</a>.
+  			&copy; WAP. All rights reserved. | Develop by 
+  			<a href="#" onclick="body_introduction()">WAP'S UP</a> | Design by LIMJINHA | Click to see -> 
+  			<a href="#" onclick="body_structure()">System Structure</a>.
   		</p>
 	</div>
 	

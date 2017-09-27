@@ -19,10 +19,10 @@
     			<input type="password" class="form-control" id="devPasswordVerify" name="devPasswordVerify" placeholder="암호 재입력">
   			</div>
   			<div class="form-group col-md-12">
-    			<input type="text" class="form-control" id="devCompany" name="devCompany" placeholder="개발사 URL">
+    			<input type="text" class="form-control" id="devCompany" name="devCompany" placeholder="개발사">
   			</div>
   			<div class="form-group col-md-12">
-    			<input type="text" class="form-control" id="devSite" name="devSite" placeholder="웹사이트 주소">
+    			<input type="text" class="form-control" id="devSite" name="devSite" placeholder="개발사 URL 주소">
   			</div>
   			<div class="form-group col-md-12">
     			<input type="text" class="form-control" id="devCategory" name="devCategory" placeholder="카테고리 태그">
