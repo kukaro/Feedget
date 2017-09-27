@@ -57,13 +57,13 @@
     <servlet-name>index-jsp</servlet-name>
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
-    <servlet>
-  	<servlet-name>body-register-jsp</servlet-name>
-  	<jsp-file>/body-register.jsp</jsp-file>
+  <servlet>
+    <servlet-name>body-register-jsp</servlet-name>
+    <jsp-file>/body-register.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>body-register-jsp</servlet-name>
-  	<url-pattern>/body-register</url-pattern>
+    <servlet-name>body-register-jsp</servlet-name>
+    <url-pattern>/body-register</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>register-jsp</servlet-name>
@@ -90,5 +90,25 @@
   <servlet-mapping>
     <servlet-name>header-login-jsp</servlet-name>
     <url-pattern>/header-login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Call</display-name>
+    <servlet-name>Call</servlet-name>
+    <servlet-class>communication.user.Call</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Call</servlet-name>
+    <url-pattern>/call</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ClientLogin</display-name>
+    <servlet-name>ClientLogin</servlet-name>
+    <servlet-class>communication.user.ClientLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientLogin</servlet-name>
+    <url-pattern>/client-login</url-pattern>
   </servlet-mapping>
 </web-app>

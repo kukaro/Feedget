@@ -18,10 +18,14 @@ import com.mongodb.util.JSON;
 import model.dto.UserDto;
 
 public class UserDao {
+	private static UserDao instance = new UserDao();
 	private String MongoDB_IP = "127.0.0.1";
 	private int MongoDB_PORT = 27017;
 	private String DB_NAME = "service";
-
+	
+	private UserDao() {
+		/*pass*/
+	}
 
 	public boolean insert(String name, String email, String password) {
 		// Connect to MongoDB
@@ -73,9 +77,8 @@ public class UserDao {
 
 		return userDto;
 	}
-	
-	
-	
 
-
+	public static UserDao getInstance() {
+		return instance;
+	}
 }

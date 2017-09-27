@@ -46,6 +46,7 @@ public class Controller extends HttpServlet {
 			break;
 		default:
 			System.out.println("None case");
+			response.sendRedirect("/Feedget/index");
 		}
 	}
 
@@ -90,6 +91,7 @@ public class Controller extends HttpServlet {
 		jsObj.addProperty("email", sess.getAttribute("loginEmail").toString());
 		jsObj.addProperty("name", sess.getAttribute("loginName").toString());
 		FeedgetService.getInstance().registFeedget(jsObj);
+		response.sendRedirect("/Feedget/index");
 	}
 
 	private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {

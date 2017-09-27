@@ -1,21 +1,19 @@
 package model.test;
 
-import model.dao.DeveloperDao;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import com.google.gson.JsonArray;
+
+import model.service.FeedgetService;
 
 public class Main {
-
+	private static final String USER_AGENT = "Mozilla/5.0";
 	public static void main(String[] args) {
-//		UserDao userDao = new UserDao();
-//		userDao.insert("asdf", "asdf", "1234");
-//		userDao.update("asdf", "name", "qwer");
-//		userDao.delete("asdf");
-//		userDao.find("asdf");
-		
-		
-//		developerDao.insert("name1", "company1", "email1", "password1", "category1");
-//		developerDao.update("email1", "name", "qwer");
-		
+		JsonArray jsArr = FeedgetService.getInstance().getFeedget("a@a.a");
 	}
-	
-
 }
