@@ -8,91 +8,99 @@
     android:orientation="vertical"
     tools:context="hackathon.wap.wapsup.Login">
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FEEDGET"
-            android:textColor="@color/white"
-            android:textSize="55dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="13dp">
+            android:layout_height="270dp"
+            android:gravity="center">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/user_img"/>
-
-            <EditText
-                android:id="@+id/login_user_id"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/edit_shape"/>
+                android:text="FEEDGET"
+                android:textColor="@color/white"
+                android:textSize="40dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/user_img"/>
+
+                <EditText
+                    android:id="@+id/login_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edit_shape"
+                    android:inputType="textUri"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/pwd_img"/>
+
+                <EditText
+                    android:id="@+id/login_user_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edit_shape"
+                    android:inputType="textUri"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="13dp">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/pwd_img"/>
 
-            <EditText
-                android:id="@+id/login_user_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/edit_shape"/>
+            <Button
+                android:id="@+id/login_join_button"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/buttonshape_login"
+                android:text="JOIN"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/buttonshape_login"
+                android:text="LOGIN"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:background="@drawable/buttonshape_login"
-            android:text="LOGIN"
-            android:textColor="@color/white"
-            android:textSize="25dp"/>
-
-        <Button
-            android:id="@+id/login_join_button"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/buttonshape_login"
-            android:text="JOIN"
-            android:textColor="@color/white"
-            android:textSize="25dp"/>
-    </LinearLayout>
-
 </LinearLayout>

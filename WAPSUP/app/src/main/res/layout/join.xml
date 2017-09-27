@@ -7,101 +7,131 @@
     android:orientation="vertical"
     tools:context="hackathon.wap.wapsup.Join">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_main"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@drawable/bg_color">
+        android:layout_height="300dp"
+        android:background="@drawable/bg_color"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Join"
+            android:text="FEEDGET JOIN"
             android:textColor="@color/white"
-            android:textSize="24dp"
-            android:textStyle="bold"/>
-    </android.support.v7.widget.Toolbar>
+            android:textSize="40dp"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:gravity="center"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:gravity="center">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/email_img"/>
+
             <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
                 android:text="EMAIL"
-                android:textSize="20dp"/>
+                android:textSize="15dp"/>
 
             <EditText
-                android:id="@+id/join_user_id"
+                android:id="@+id/join_user_email"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_shape2"
+                android:inputType="textUri"/>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
             android:gravity="center">
 
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/lock_img"/>
+
             <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
                 android:text="PASSWORD"
-                android:textSize="20dp"/>
+                android:textSize="15dp"/>
 
             <EditText
                 android:id="@+id/join_user_password"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_shape2"
+                android:inputType="textUri"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
             android:gravity="center">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/lock_img"/>
+
             <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
                 android:text="PWDCHECK"
-                android:textSize="20dp"/>
+                android:textSize="15dp"/>
 
             <EditText
                 android:id="@+id/join_user_pwdcheck"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_shape2"
+                android:inputType="textUri"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+
             android:gravity="center">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/name_img"/>
+
             <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
                 android:text="NAME"
-                android:textSize="20dp"/>
+                android:textSize="15dp"/>
 
             <EditText
                 android:id="@+id/join_user_name"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_shape2"
+                android:inputType="textUri"/>
 
         </LinearLayout>
 
@@ -109,18 +139,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp">
 
         <Button
             android:id="@+id/join_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape_join"
-            android:text="LOGIN"
-            android:textColor="@color/gray"
+            android:text="JOIN"
+            android:textColor="#000000"
             android:textSize="25dp"/>
     </LinearLayout>
 </LinearLayout>
