@@ -25,7 +25,8 @@ public class Login extends AppCompatActivity {
     public Button loginButton, joinButton;
     public EditText userEmail, userPassword;
     public static String url = "http://192.168.43.153:3000/VolleyTest/Servlet2.java";
-    String email,password,emailCheck="";
+    String email, password, emailCheck = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +50,6 @@ public class Login extends AppCompatActivity {
         });
 
 
-
-
         joinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,34 +59,38 @@ public class Login extends AppCompatActivity {
             }
         });
 
-    } private Response.Listener<JSONObject> networkSuccessListener() {
+    }
+
+    private Response.Listener<JSONObject> networkSuccessListener() {
         return new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(final JSONObject response) {
                 try {
-                    emailCheck   =   response.getString("emailCheck");
-                    if(emailCheck.equals("true")) {
+                    emailCheck = response.getString("emailCheck");
+                    if (emailCheck.equals("true")) {
                         Toast.makeText(Login.this, "환영합니다", Toast.LENGTH_SHORT).show();
                         Intent loginIntent = new Intent(getApplicationContext(), Main.class);
                         startActivity(loginIntent);
                         finish();
-                    }else{
-                        Log.e("Fail: ","fail");
+                    } else {
+                        Log.e("Fail: ", "fail");
                     }
-                    Log.e("emailCheck: ",emailCheck);
+                    Log.e("emailCheck: ", emailCheck);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         };
     }
+
     public Map<String, String> getParams() {
         Map<String, String> params = new HashMap<String, String>();
         params.put("email", email);
         params.put("password", password);
-        params.put("name","No");
+        params.put("name", "No");
         return params;
     }
+
     private Response.ErrorListener networkErrorListener() {
         return new Response.ErrorListener() {
 

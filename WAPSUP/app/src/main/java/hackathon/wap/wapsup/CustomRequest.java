@@ -12,17 +12,12 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
-/**
- * Created by dl579 on 2017-09-26.
- */
-
 public class CustomRequest extends Request<JSONObject> {
 
     private Response.Listener<JSONObject> listener;
     private Map<String, String> params;
 
-    public CustomRequest(String url, Map<String, String> params,
-                         Response.Listener<JSONObject> reponseListener, Response.ErrorListener errorListener) {
+    public CustomRequest(String url, Map<String, String> params, Response.Listener<JSONObject> reponseListener, Response.ErrorListener errorListener) {
         super(Request.Method.GET, url, errorListener);
         this.listener = reponseListener;
         this.params = params;

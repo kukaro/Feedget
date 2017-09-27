@@ -6,9 +6,14 @@
 	color:white;
 	margin:40px 0 0 500px;
 	width:200px;
-	height:40px;
+	height:50px;
 }
 </style>
+<script>
+function register(){
+	$('#body-frame').load('body-register');
+}
+</script>
 
 <div id="header-featured"> 
 	<div id="extra" class="container">
@@ -16,5 +21,5 @@
     <span>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh</span> 
     <p>This is <strong>Breadth</strong>, a free, fully standards-compliant CSS template designed byTEMPLATEDreative Commons Attributilicense, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 
-    <button type="submit" class="btn btn-lg btn-block col-lg-2">피젯 등록</button>
+    <button type="submit" class="btn btn-lg btn-block col-lg-2" onclick="register()">피젯 등록</button>
 </div>

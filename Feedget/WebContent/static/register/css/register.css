@@ -1,0 +1,89 @@
+#header-wrapper {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index:20;
+}
+
+#header-featured {
+	margin-top: 150px;
+	margin-bottom:50px;
+}
+
+#header-featured h3 {
+	margin: 30px 0 0 90px;
+	color: white;
+}
+
+.addText {
+	margin: 10px 0 0 15px;
+}
+
+.register-div {
+	height: 500px;
+	margin: 20px 70px 50px 90px;
+}
+
+.registerForm {
+	background-color: white;
+	padding: 50px;
+}
+
+.preview {
+	height: 400px;
+	background-color: white;
+	margin-left: 70px;
+}
+
+.form-group button {
+	float: right;
+	width: 80px;
+	height: 30px;
+	font-size: 13px;
+	margin-right: 15px;
+	background-color: #1B9772;
+	color: white;
+}
+
+#feed-layout {
+	margin-top: 5px;
+}
+
+.addText {
+	margin-left: 15px;
+	width: 460px;
+	border: 1px gray;
+}
+
+.addText-key {
+	width: 100px;
+	padding: 0px 10px 5px 0px;
+}
+
+.addText-value {
+	width: 325px;
+	padding: 0px 0px 5px 0px;
+}
+
+.buttons button {
+	width:143px;
+	color:white;
+	margin-left:15px;
+	margin-top:20px;
+	
+}
+
+.addText-remove btn {
+	background-color: #1B9772;
+	text-align: center;
+	font-size: 13px;
+	color: white;
+}
+
+.save {
+	width: 460px;
+	background-color: #1B9772;
+	text-align: center;
+	color: white;
+	margin: 40px 10px 0 15px;
+}
