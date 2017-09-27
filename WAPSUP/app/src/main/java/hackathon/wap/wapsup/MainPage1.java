@@ -9,9 +9,13 @@ import android.view.ViewGroup;
 
 public class MainPage1 extends Fragment {
 
+    MainPage1Adapter adapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        adapter = new MainPage1Adapter();
     }
 
     @Override
