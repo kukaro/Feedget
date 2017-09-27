@@ -22,6 +22,7 @@
 .register-div {
 	height: 500px;
 	margin: 20px 70px 50px 90px;
+	overflow:auto;
 }
 
 .registerForm {

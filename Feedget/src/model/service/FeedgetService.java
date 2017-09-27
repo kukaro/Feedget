@@ -7,9 +7,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import model.dao.FeedgetDao;
 import model.dto.DeveloperDto;
 import model.dto.FeedgetDto;
 
@@ -50,5 +53,20 @@ public class FeedgetService {
 	}
 	public static FeedgetService getInstance() {
 		return instance;
+	}
+	public boolean registFeedget(JsonObject jsObj) {
+		FeedgetDao.getInstance().insert(jsObj);
+		return false;
+	}
+	public JsonArray getFeedget(String email) {
+		return FeedgetDao.getInstance().find(email);
+	}
+	public JsonArray findAll() {
+		try {
+			return FeedgetDao.getInstance().findAll();
+		} catch(Exception e) {
+			return null;
+		}
+		
 	}
 }

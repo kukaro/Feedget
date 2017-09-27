@@ -1,10 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <style>
 .onMouse a {
 	background: #197d62;
 	color: #FFF !important;
 }
+<<<<<<< HEAD
 .outMouse a {
+=======
+
+.outMouse {
+>>>>>>> a64e50101f8684fddb2ec4dd45ad5dbc8514176c
 	background: white;
 	color: #212121 !important;
 }
@@ -36,6 +42,7 @@
 			</h1>
 		</div>
 		<div id="menu">
+<<<<<<< HEAD
       		<ul>
         		<li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="1" title="" onclick="header_home();">Home</a></li>
         		<li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="2" title="" onclick="header_search();">Search</a></li>
@@ -47,3 +54,25 @@
 	</div>
     
 </div>
+=======
+			<ul>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="1" title="">Home</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="2" title="" onclick="header_search();">Search</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="3" title="" onclick="header_category();">Category</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="4" title="" onclick="header_mypage();">Mypage</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="4" title="" onclick="header_login();">Login</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+>>>>>>> a64e50101f8684fddb2ec4dd45ad5dbc8514176c
