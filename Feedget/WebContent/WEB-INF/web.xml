@@ -71,6 +71,14 @@
   	<servlet-name>body-search-jsp</servlet-name>
   	<url-pattern>/body-search</url-pattern>
   </servlet-mapping>
+    <servlet>
+  	<servlet-name>body-register-jsp</servlet-name>
+  	<jsp-file>/body-register.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>body-register-jsp</servlet-name>
+  	<url-pattern>/body-register</url-pattern>
+  </servlet-mapping>
   <servlet>
   	<servlet-name>header-jsp</servlet-name>
   	<jsp-file>/header.jsp</jsp-file>
