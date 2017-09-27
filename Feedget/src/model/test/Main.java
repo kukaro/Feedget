@@ -12,10 +12,8 @@ public class Main {
 //		userDao.find("asdf");
 		
 		
-		DeveloperDao developerDao = new DeveloperDao();
 //		developerDao.insert("name1", "company1", "email1", "password1", "category1");
 //		developerDao.update("email1", "name", "qwer");
-		developerDao.delete("email1");
 		
 	}
 	

@@ -62,9 +62,10 @@ public class FeedgetDao {
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
 		DBObject dbObject = collection.findOne(searchQuery);
-		feedgetDto = new FeedgetDto(((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("img"),((BasicBSONObject) dbObject).getString("comment"),((BasicBSONObject) dbObject).getString("color"));
+		//feedgetDto = new FeedgetDto(((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("img"),((BasicBSONObject) dbObject).getString("comment"),((BasicBSONObject) dbObject).getString("color"));
         System.out.println(((BasicBSONObject) dbObject).getString("password"));
 
-		return feedgetDto;
+		//return feedgetDto;
+        return null;
 	}
 }

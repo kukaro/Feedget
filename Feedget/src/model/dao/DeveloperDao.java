@@ -13,10 +13,24 @@ import com.mongodb.util.JSON;
 import model.dto.DeveloperDto;
 
 public class DeveloperDao {
+	/*
+	 * Field
+	 */
+	private static DeveloperDao instance = new DeveloperDao();
 	private String MongoDB_IP = "127.0.0.1";
 	private int MongoDB_PORT = 27017;
 	private String DB_NAME = "service";
 
+	/*
+	 * constructor
+	 */
+	private DeveloperDao() {
+		/*pass*/
+	}
+	
+	/*
+	 * Method
+	 */
 	public boolean insert(String name, String company,String email, String password,String category,String site) {
 		// Connect to MongoDB
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
@@ -62,10 +76,15 @@ public class DeveloperDao {
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
 		DBObject dbObject = collection.findOne(searchQuery);
+		if(dbObject==null) {
+			return null;
+		}
 		developerDto = new DeveloperDto(((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("company"),((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("password"),((BasicBSONObject) dbObject).getString("category"),((BasicBSONObject) dbObject).getString("site"));
-        System.out.println(((BasicBSONObject) dbObject).getString("password"));
+        //System.out.println(((BasicBSONObject) dbObject).getString("password"));
 
 		return developerDto;
 	}
-
+	public static DeveloperDao getInstance() {
+		return instance;
+	}
 }

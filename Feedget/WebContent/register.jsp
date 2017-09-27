@@ -55,9 +55,6 @@ function frmCheck()
 	position:fixed;
 	width:100%;
 }
-#extra h2 {
-	color:white;
-}
 #header-featured {
 	margin-top:150px;
 	height:1000px;
@@ -68,13 +65,6 @@ function frmCheck()
 }
 .addText {
 	margin:10px 0 0 15px;
-}
-.key {
-	margin: 10px 20px 0 0;
-}
-.value {
-	margin-left:10px;
-	margin-right:10px;
 }
 .register-div {
 	height:500px;
@@ -87,24 +77,54 @@ function frmCheck()
 .preview {
 	height:400px;
 	background-color:white;
-	margin-left:40px;
+	margin-left:70px;
 }
-.plus {
-}
-.plusBtn {
-	width:100px;
+.form-group button {
+	float:right;
+	width:80px;
 	height:30px;
-	text-align:center;
-	font-size:10px;
-}
-.remove {
+	font-size:13px;
+	margin-right:15px;
 	background-color:#1B9772;
-	width:30px;
-	height:30px;
+	color:white;
+}
+#feed-layout {
+	margin-left:15px;
+	margin-top:5px;
+}
+.addText {
+	margin-left:15px;
+	width:460px;
+	border:1px;
+	border-color:red;
+	
+}
+.addText-key {
+	width:130px;
+	padding:0px 10px 5px 0px;
+}
+.addText-value {
+	width:280px;
+	padding:0px 10px 5px 10px;
+}
+.addText-remove {
+	width:50px;
+	padding:0px 0px 5px 10px;
+}
+.addText-remove btn {
+	background-color:#1B9772;
 	text-align:center;
 	font-size:13px;
 	color:white;
 }
+.save {
+	width:460px;
+	background-color:#1B9772;
+	text-align:center;
+	color:white;
+	margin:40px 10px 0 15px;
+}
+
 </style>
 </head>
 <body>
@@ -138,58 +158,58 @@ function frmCheck()
                         <div role="tabpanel" class="tab-pane active" id="home">
                             <form>
                               <div class="form-group">
-                                <label for="inputName">피젯 이름</label>
-                                <input type="text" class="form-control" id="" placeholder="Feedget Name">
+                                <label for="feedgetName">피젯 이름</label>
+                                <input type="text" class="form-control" id="feedgetName" name="feedgetName" placeholder="Feedget Name">
                               </div>
                               <div class="form-group">
-                                <label for="inputName">피젯을 간단하게 소개해주세요.</label>
-                                <input type="text" class="form-control" id="" placeholder="Feedget Name">
+                                <label for="description">피젯을 간단하게 소개해주세요.</label>
+                                <input type="text" class="form-control" id="description" name="description" placeholder="Feedget Description">
                               </div>
                                 <div class="form-group">
-                                <label for="inputLastName">등록인</label>
-                                <input type="text" class="form-control" id="" placeholder="User Name">
+                                <label for="developer">등록인</label>
+                                <input type="text" class="form-control" id="developer" name="developer" placeholder="Developer">
                               </div>
                               <div class="form-group">
-                                <label for="exampleInputEmail1">개발사</label>
-                                <input type="text" class="form-control" id="" placeholder="Developer Name">
+                                <label for="company">개발사</label>
+                                <input type="text" class="form-control" id="company" name="company" placeholder="Company">
                               </div>
                               <div class="form-group row">
-                                <label for="exampleInputEmail1">피젯 레이아웃 정보들을 입력해주세요.</label>
-                                <div class="plus row">
-                                	<a href="#" class="plusBtn button col-md-4">+텍스트</a>
-                                	<a href="#" class="plusBtn button col-md-4">+이미지</a>
+                                <label id="feed-layout">피젯 레이아웃 정보들을 입력해주세요.</label>
+                               	<button type="button" class="btn btn col-lg-2">+텍스트</button>
+                               	<button type="button" class="btn btn col-lg-2">+이미지</button>
                                 </div>
                                	<div class="row">
                                 	<table class="addText">
                                 		<tr>
-                                			<td>
-                                				<input type="text" class="key form-control col-md-2" id="" placeholder="Text-Key">
+                                			<td class="addText-key">
+                                				<input type="text" class="key form-control" id="" placeholder="Text-Key">
                                 			</td>
-                                			<td>
-                                				<input type="text" class="value form-control col-md-3" id="" placeholder="Text-Value">
+                                			<td class="addText-value">
+                                				<input type="text" class="value form-control" id="" placeholder="Text-Value">
                                 			</td>
-                                			<td>
-                                				<a href="#" class="remove button col-md-1">삭제</a>
-                                			</td>
+                                			
                                 		</tr>
                                 	</table>
                                 </div>
                                 
                                 <div class="row">
-                                	<table class="addText">
+                                	<table class="addImage">
                                 		<tr>
-                                			<td>
-                                				<input type="text" class="key form-control col-md-4" id="" placeholder="Developer Name">
+                                			<td class="addText-key">
+                                				<input type="text" class="key form-control" id="" placeholder="Text-Key">
                                 			</td>
-                                			<td>
-                                				<input type="text" class="value form-control col-md-4" id="" placeholder="Developer Name">
+                                			<td class="addText-value">
+                                				<input type="text" class="value form-control" id="" placeholder="Text-Value">
+                                			</td>
+                                			<td class="addText-remove">
+                                				<button type="button" class="btn">삭제</button>
                                 			</td>
                                 		</tr>
                                 	</table>
                                 </div>
                                 
                                 <div class="row">
-                                	<a href="#" class="button">등록하기</a> </div>
+                                	<button type="button" class="save btn btn-lg btn-block col-lg-2">등록하기</button>
                               		
                                 </div>
                               
@@ -200,27 +220,15 @@ function frmCheck()
                         </div>
 		
 		</div>
-		
-	
-	</div>
-	
-	<div class="preview col-md-5">
+		<div class="preview col-md-5">
 		 미리보
 		</div>
-
-
-
+	
+	</div>
 
 
 
 </div>
-
-
-
-<div id="wrapper">
- 
-</div>
-
 
 
 <div id="copyright" class="container">
