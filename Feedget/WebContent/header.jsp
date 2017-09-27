@@ -1,9 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <style>
 .onMouse {
 	background: #197d62;
 	color: white !important;
 }
+
 .outMouse {
 	background: white;
 	color: #212121 !important;
@@ -31,27 +33,22 @@
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1"
-					title="" onclick="header_index()">Home</a></li>
-				<li><a href="#" accesskey="2" title=""
-					onclick="header_search();">Search</a></li>
-				<li><a href="#" accesskey="3" title=""
-					onclick="header_category();">Category</a></li>
-				<li><a href="#" accesskey="4" title=""
-					onclick="header_mypage();">Mypage</a></li>
-				<li><a href="#" accesskey="5" title=""
-					onclick="header_login();">Login</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="1" title="">Home</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="2" title="" onclick="header_search();">Search</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="3" title="" onclick="header_category();">Category</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="4" title="" onclick="header_mypage();">Mypage</a></li>
+				<li onMouseOver="this.className='onMouse';"
+					onMouseOut="this.className='outMouse';"><a href="#"
+					accesskey="4" title="" onclick="header_login();">Login</a></li>
 			</ul>
 		</div>
 	</div>
-    <div id="menu">
-      <ul>
-        <li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="1" title="">Home</a></li>
-        <li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="2" title="" onclick="header_search();">Search</a></li>
-        <li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="3" title="" onclick="header_category();">Category</a></li>
-        <li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="4" title="" onclick="header_mypage();">Mypage</a></li>
-        <li onMouseOver="this.className='onMouse';" onMouseOut="this.className='outMouse';"><a href="#" accesskey="4" title="" onclick="header_login();">Login</a></li>
-      </ul>
-    </div>
-  </div>
 </div>

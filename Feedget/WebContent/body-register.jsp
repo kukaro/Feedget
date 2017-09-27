@@ -4,11 +4,6 @@
 	type="text/css" media="all" />
 <script src="./static/index/js/jquery-3.2.1.js"></script>
 <script src="./static/register/js/register.js"></script>
-<script>
-function fidgetSubmit(){
-	$('body').load('/Feedget/controller?action=registFeedget',{feedgetName:$('#feedgetName').val()});
-}
-</script>
 <div id="header-featured">
 
 	<h3>피젯 등록</h3>
