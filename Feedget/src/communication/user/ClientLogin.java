@@ -27,9 +27,7 @@ public class ClientLogin extends HttpServlet {
 		String password = request.getParameter("password");
 		PrintWriter out = response.getWriter();
 		if (UserService.getInstance().login(email, password) != null) {
-			JsonArray jsArr = FeedgetService.getInstance().findAll();
-			String result = "{'emailCheck':'true','data':" + jsArr.toString() + "}";
-			System.out.println(result);
+			String result = "{'emailCheck':'true'}";
 			out.println(result);
 		} else {
 			out.println("{'emailCheck':'false'}");

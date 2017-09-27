@@ -21,7 +21,10 @@ public class UserService {
 		}
 		return null;
 	}
-	public Object join(String email, String password,String name) {
-		return null;
+	public boolean join(String email, String password, String name) {
+		if(UserDao.getInstance().find(email)==null) {
+			return UserDao.getInstance().insert(name, email, password);
+		}
+		return false;
 	}
 }

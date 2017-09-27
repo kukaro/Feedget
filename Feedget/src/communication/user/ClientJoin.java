@@ -24,8 +24,11 @@ public class ClientJoin extends HttpServlet {
 		String password = request.getParameter("password");
 		String name = request.getParameter("name");
 		PrintWriter out = response.getWriter();
-		if (UserService.getInstance().join(email, password, name) != null) {
-
+		if (UserService.getInstance().join(email, password, name)) {
+			out.println("{'state':'true'}");
+		}
+		else {
+			out.println("{'state':'false'}");
 		}
 	}
 
