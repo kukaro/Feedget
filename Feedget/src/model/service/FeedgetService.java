@@ -61,4 +61,12 @@ public class FeedgetService {
 	public JsonArray getFeedget(String email) {
 		return FeedgetDao.getInstance().find(email);
 	}
+	public JsonArray findAll() {
+		try {
+			return FeedgetDao.getInstance().findAll();
+		} catch(Exception e) {
+			return null;
+		}
+		
+	}
 }

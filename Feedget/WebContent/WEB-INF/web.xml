@@ -111,4 +111,14 @@
     <servlet-name>ClientLogin</servlet-name>
     <url-pattern>/client-login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ClientJoin</display-name>
+    <servlet-name>ClientJoin</servlet-name>
+    <servlet-class>communication.user.ClientJoin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientJoin</servlet-name>
+    <url-pattern>/client-join</url-pattern>
+  </servlet-mapping>
 </web-app>

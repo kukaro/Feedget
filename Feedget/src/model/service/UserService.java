@@ -21,4 +21,7 @@ public class UserService {
 		}
 		return null;
 	}
+	public Object join(String email, String password,String name) {
+		return null;
+	}
 }

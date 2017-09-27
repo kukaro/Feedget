@@ -72,6 +72,9 @@ public class UserDao {
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
 		DBObject dbObject = collection.findOne(searchQuery);
+		if(dbObject==null) {
+			return null;
+		}
 		userDto = new UserDto(((BasicBSONObject) dbObject).getString("name"),((BasicBSONObject) dbObject).getString("email"),((BasicBSONObject) dbObject).getString("password"));
         System.out.println(((BasicBSONObject) dbObject).getString("password"));
 

@@ -8,15 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.JsonArray;
-
-import model.service.FeedgetService;
 import model.service.UserService;
 
-public class ClientLogin extends HttpServlet {
+public class ClientJoin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ClientLogin() {
+	public ClientJoin() {
 		super();
 	}
 
@@ -25,14 +22,10 @@ public class ClientLogin extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+		String name = request.getParameter("name");
 		PrintWriter out = response.getWriter();
-		if (UserService.getInstance().login(email, password) != null) {
-			JsonArray jsArr = FeedgetService.getInstance().findAll();
-			String result = "{'emailCheck':'true','data':" + jsArr.toString() + "}";
-			System.out.println(result);
-			out.println(result);
-		} else {
-			out.println("{'emailCheck':'false'}");
+		if (UserService.getInstance().join(email, password, name) != null) {
+
 		}
 	}
 
@@ -45,4 +38,5 @@ public class ClientLogin extends HttpServlet {
 			throws ServletException, IOException {
 		process(request, response);
 	}
+
 }

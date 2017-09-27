@@ -66,10 +66,28 @@ public class FeedgetDao {
 		
 		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
 		DB db = mongoClient.getDB(DB_NAME);
-		DBCollection collection = db.getCollection("developer");
+		DBCollection collection = db.getCollection("feedget");
 		FeedgetDto feedgetDto;
 		
 		BasicDBObject searchQuery = new BasicDBObject().append("email", email);
+		DBCursor dbCursor = collection.find();
+		JsonParser parser = new JsonParser();
+		JsonArray jsArr = new JsonArray();
+		JsonObject jsTmp;
+        while(dbCursor.hasNext()){
+        		DBObject dbO = dbCursor.next();
+        		System.out.println(dbO.toString());
+        		jsTmp = (JsonObject) parser.parse(dbO.toString());
+        		jsArr.add(jsTmp);
+        }
+        return jsArr;
+	}
+	public JsonArray findAll() {
+		MongoClient mongoClient = new MongoClient(new ServerAddress(MongoDB_IP, MongoDB_PORT));
+		DB db = mongoClient.getDB(DB_NAME);
+		DBCollection collection = db.getCollection("feedget");
+		FeedgetDto feedgetDto;
+		BasicDBObject searchQuery = new BasicDBObject();
 		DBCursor dbCursor = collection.find();
 		JsonParser parser = new JsonParser();
 		JsonArray jsArr = new JsonArray();
