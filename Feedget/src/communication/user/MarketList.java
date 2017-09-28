@@ -25,7 +25,7 @@ public class MarketList extends HttpServlet {
     		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		JsonArray jsArr = FeedgetService.getInstance().findAll();
-		out.println(jsArr.toString());
+		out.println("{'a':"+jsArr.toString()+"}");
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

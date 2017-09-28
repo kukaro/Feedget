@@ -25,7 +25,7 @@ public class Call extends HttpServlet {
 		String email = request.getParameter("email");
 		PrintWriter out = response.getWriter();
 		JsonArray jsArr = FeedgetService.getInstance().getFeedget(email);
-		out.println(jsArr.toString());
+		out.println("{'a':"+jsArr.toString()+"}");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
