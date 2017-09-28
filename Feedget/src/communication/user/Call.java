@@ -21,7 +21,7 @@ public class Call extends HttpServlet {
 
 	protected void process(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
 		String email = request.getParameter("email");
 		PrintWriter out = response.getWriter();
 		JsonArray jsArr = FeedgetService.getInstance().getFeedget(email);
